@@ -191,3 +191,70 @@ body {
     }
   }
 }
+
+.seasons {
+  padding: 233px 0;
+
+  @media (max-width: 767px) {
+    padding: 51px 0 85px;
+    text-align: center;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    align-items: center;
+
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+      row-gap: 64px;
+    }
+  }
+
+  &__title {
+    font-size: 48px;
+    line-height: 58px;
+    margin-bottom: 32px;
+    font-weight: 700;
+    color: $colorText;
+
+    @media (max-width: 767px) {
+      font-size: 32px;
+      line-height: 39px;
+    }
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 32px;
+    color: $colorText;
+    margin-bottom: 32px;
+
+    @media (max-width: 767px) {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+
+  &__btn {
+    border: 0;
+    cursor: pointer;
+    width: 100%;
+
+    @media (max-width: 767px) {
+      margin: 0 auto;
+    }
+  }
+
+  &__block {
+    display: flex;
+    justify-content: flex-end;
+
+    object {
+      width: 100%;
+      max-width: 481px;
+    }
+  }
+}
