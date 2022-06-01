@@ -34,22 +34,41 @@
       </div>
     </div>
 
-    <section class="seasons">
-      <div class="container seasons__container">
-        <div class="seasons__info">
-          <h2 class="seasons__title">Времена года!</h2>
-          <p class="seasons__text">
+    <section class="seasons game-item">
+      <div class="container seasons__container game-item__container">
+        <div class="seasons__info game-item__info">
+          <h2 class="seasons__title game-item__title">Времена года!</h2>
+          <p class="seasons__text  game-item__text">
             Нажмите кнопку играть, введите номер месяца (от 1 до 12) и вы
             узнаете к какому времени года он относится
           </p>
-          <button class="btn seasons__btn">Играть!</button>
+          <button class="btn seasons__btn game-item__btn" id="firstPlay">Играть!</button>
         </div>
-        <div class="seasons__block">
+        <div class="seasons__block game-item__block">
           <object
             data="assets/season.svg"
             type="image/svg+xml"
             class="ico-object"
           ></object>
+        </div>
+      </div>
+    </section>
+
+    <section class="words game-item">
+      <div class="container seasons__container game-item__container">
+        <div class="words__block game-item__block">
+          <object
+            data="assets/words.svg"
+            type="image/svg+xml"
+            class="ico-object"
+          ></object>
+        </div>
+        <div class="words__info game-item__info">
+          <h2 class="words__title game-item__title">Запомни слова </h2>
+          <p class="words__text game-item__text">
+            При нажатии на кнопку играть, вы увидите несколько слов, которые вам необходимо запомнить.
+          </p>
+          <button class="btn words__btn game-item__btn" id="secondPlay">Играть!</button>
         </div>
       </div>
     </section>

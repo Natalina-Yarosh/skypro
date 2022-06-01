@@ -215,68 +215,6 @@ body {
   }
 }
 
-.seasons__container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  -webkit-column-gap: 30px;
-          column-gap: 30px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-@media (max-width: 767px) {
-  .seasons__container {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    row-gap: 64px;
-  }
-}
-
-.seasons__title {
-  font-size: 48px;
-  line-height: 58px;
-  margin-bottom: 32px;
-  font-weight: 700;
-  color: #fff;
-}
-
-@media (max-width: 767px) {
-  .seasons__title {
-    font-size: 32px;
-    line-height: 39px;
-  }
-}
-
-.seasons__text {
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 32px;
-  color: #fff;
-  margin-bottom: 32px;
-}
-
-@media (max-width: 767px) {
-  .seasons__text {
-    font-size: 14px;
-    line-height: 22px;
-  }
-}
-
-.seasons__btn {
-  border: 0;
-  cursor: pointer;
-  width: 100%;
-}
-
-@media (max-width: 767px) {
-  .seasons__btn {
-    margin: 0 auto;
-  }
-}
-
 .seasons__block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -289,5 +227,100 @@ body {
 .seasons__block object {
   width: 100%;
   max-width: 481px;
+}
+
+.words {
+  padding: 243px 0;
+}
+
+@media (max-width: 767px) {
+  .words {
+    padding: 51px 0 90px;
+    text-align: center;
+  }
+}
+
+.words__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.words__block object {
+  width: 100%;
+  max-width: 481px;
+}
+
+@media (max-width: 767px) {
+  .words__block {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
+.game-item__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 767px) {
+  .game-item__container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    row-gap: 64px;
+  }
+}
+
+.game-item__title {
+  font-size: 48px;
+  line-height: 58px;
+  margin-bottom: 32px;
+  font-weight: 700;
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  .game-item__title {
+    font-size: 32px;
+    line-height: 39px;
+  }
+}
+
+.game-item__text {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 32px;
+  color: #fff;
+  margin-bottom: 32px;
+}
+
+@media (max-width: 767px) {
+  .game-item__text {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.game-item__btn {
+  border: 0;
+  cursor: pointer;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .game-item__btn {
+    margin: 0 auto;
+  }
 }
 /*# sourceMappingURL=style.css.map */
