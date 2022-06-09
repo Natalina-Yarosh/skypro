@@ -209,11 +209,9 @@ body {
       max-width: 481px;
     }
   }
-
 }
 
-
-.words{
+.words {
   padding: 243px 0;
 
   @media (max-width: 767px) {
@@ -236,7 +234,7 @@ body {
   }
 }
 
-.game-item{
+.game-item {
   &__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -249,7 +247,6 @@ body {
     }
   }
 
-  
   &__title {
     font-size: 48px;
     line-height: 58px;
@@ -284,5 +281,35 @@ body {
     @media (max-width: 767px) {
       margin: 0 auto;
     }
+  }
+}
+
+.puzzles {
+  background-image: url(../assets/img.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 276px 0 288px;
+  text-align: center;
+
+  @media (max-width: 767px) {
+    background-image: url(../assets/img-mobile.jpg);
+    padding: 51px 0 487px;
+  }
+
+  &__btn {
+    margin: 0 auto;
+  }
+}
+
+.footer {
+  border-top: 1px solid $colorBorderFooter;
+  padding: 32px 0;
+
+  &__text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: $colorText;
+    text-align: center;
   }
 }
