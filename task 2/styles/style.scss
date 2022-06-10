@@ -1,0 +1,52 @@
+@import "vars";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: $colorSecondary;
+}
+
+.container {
+  max-width: 600px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.wrap {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+  }
+
+  &__btn {
+    background-color: $colorSecondary;
+    color: $colorPrimary;
+    border: 1px solid $colorPrimary;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    padding: 10px;
+
+    &:hover {
+      box-shadow: 0 0 10px $colorPrimary;
+    }
+
+    &:active {
+      background-color: $colorPrimary;
+      color: $colorSecondary;
+    }
+  }
+}

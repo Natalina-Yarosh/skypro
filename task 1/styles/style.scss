@@ -1,0 +1,103 @@
+@import "vars";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: $colorSecondary;
+}
+
+.container {
+  max-width: 600px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.wrap {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__form {
+    position: relative;
+    padding: 50px 20px;
+    border-radius: 50px;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      background: #5a3c3c;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      filter: blur(100px);
+    }
+  }
+
+  &__title {
+    color: $colorPrimary;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  &__block {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    column-gap: 30px;
+
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+      row-gap: 30px;
+    }
+  }
+
+  &__input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 20px;
+    color: $colorSecondary;
+    font-weight: 500;
+    outline: none;
+
+    @media (max-width: 767px) {
+      text-align: center;
+    }
+  }
+
+  &__btn {
+    background-color: $colorSecondary;
+    color: $colorPrimary;
+    border: 1px solid $colorPrimary;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s linear;
+
+    @media (max-width: 767px) {
+      padding: 15px;
+      max-width: 200px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    &:hover {
+      box-shadow: 0 0 10px $colorPrimary;
+    }
+
+    &:active {
+      background-color: $colorPrimary;
+      color: $colorSecondary;
+    }
+  }
+}
