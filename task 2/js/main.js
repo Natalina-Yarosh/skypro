@@ -6,27 +6,59 @@ let body = document.querySelector("#body");
 let r = 0;
 let g = 0;
 let b = 0;
+let result = "";
 
-function generatePassword(r, b, g) {
-  body.style.background = `rgb( + ${r} + ,  + ${b} + ,  + ${g})`;
-  console.log(r, b, g);
-  return r, b, g;
+function generateRed(r) {
+  result = `rgb(${r}, ${g}, ${b})`;
+  console.log(result);
+
+  body.style.background = result;
+  return result;
+}
+
+function generateGreen(g) {
+  result = `rgb(${r}, ${g} , ${b})`;
+  console.log(result);
+
+  body.style.background = result;
+  return result;
+}
+
+function generateBlue(b) {
+  result = `rgb(${r}, ${g}, ${b})`;
+  console.log(result);
+
+  body.style.background = result;
+  return result;
 }
 
 btnOne.addEventListener("click", function () {
-  r += 100;
-  generatePassword(r, 0, 0);
+  if (r < 255) {
+    r += 5;
+    generateRed(r);
+  } else {
+    generateRed(255);
+  }
   console.log(r);
 });
 
 btnTwo.addEventListener("click", function () {
-  b += 10;
-  generatePassword(0, b, 0);
-  console.log(b);
+  if (g < 255) {
+    g += 5;
+    generateGreen(g);
+  } else {
+    generateGreen(255);
+  }
+  console.log(g);
 });
 
 btnThree.addEventListener("click", function () {
-  g += 1;
-  generatePassword(0, 0, g);
-  console.log(g);
+  if (b < 255) {
+    b += 5;
+    generateBlue(b);
+  } else {
+    generateBlue(255);
+  }
+
+  console.log(b);
 });
