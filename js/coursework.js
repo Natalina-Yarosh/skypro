@@ -9,7 +9,7 @@ const numbers = {
   keyin7: 7,
 };
 
-let numbersArray = Object.values(numbers);
+const numbersArray = Object.values(numbers);
 let resultOne = numbersArray.filter((item) => item >= 3);
 
 console.log(resultOne);
@@ -52,35 +52,14 @@ const week = {
 };
 
 let textAlert = prompt("введите день недели");
+const weekArr = Object.keys(week);
 
-switch (textAlert) {
-  case "1":
-    console.log("понедельник");
-    break;
-  case "2":
-    console.log("вторник");
-    break;
-  case "3":
-    console.log("среда");
-    break;
-  case "4":
-    console.log("четверг");
-    break;
-  case "5":
-    console.log("пятница");
-    break;
-  case "6":
-    console.log("суббота");
-    break;
-  case "7":
-    console.log("воскресенье");
-    break;
-  default:
-    if (week[textAlert]) {
-      console.log(week[textAlert]);
-    } else {
-      console.log("введите правильное значение");
-    }
+if (week[textAlert]) {
+  console.log(week[textAlert]);
+} else if (textAlert < 1 || textAlert > 7) {
+  console.log("введите правильное значение");
+} else {
+  console.log(weekArr[textAlert - 1]);
 }
 
 /*5. */
@@ -106,7 +85,7 @@ arr.reduce((a, b) => a + b);
 
 /*6. */
 
-const monts = {
+const months = {
   ru: [
     "январь",
     "февраль",
@@ -140,12 +119,12 @@ const monts = {
 let language = prompt("Введите ru или en");
 let arrMonth = [];
 
-if (monts[language]) {
+if (months[language]) {
   let month = prompt("Введите номер месяца, который вы хотите вывести");
   if (month < 1 || month > 12) {
     alert("введите правильное значение");
   } else {
-    arrMonth = Object.values(monts[language]);
+    arrMonth = Object.values(months[language]);
     alert(arrMonth[month - 1]);
   }
 } else {
