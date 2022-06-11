@@ -36,13 +36,13 @@ let randomWordArr = [
   "Мандарин",
 ];
 
-function randonWord(arr) {
+function getRandonWord(arr) {
   arr = arr.sort(() => Math.random() - 0.5);
 
   alert("Важен регистр слов:" + " " + arr);
 
-  let one = prompt("Чему равнялся первый элемент массива?");
-  let two = prompt("Чему равнялся последний элемент массива?");
+  const one = prompt("Чему равнялся первый элемент массива?");
+  const two = prompt("Чему равнялся последний элемент массива?");
 
   if (one === arr[0] && two === arr[arr.length - 1]) {
     console.log("Вы угадали оба элемента");
@@ -57,7 +57,7 @@ function randonWord(arr) {
 }
 
 secondPlay.addEventListener("click", function () {
-  randonWord(randomWordArr);
+  getRandonWord(randomWordArr);
 });
 
 let thirdPlay = document.querySelector("#thirdPlay");
@@ -67,21 +67,21 @@ let puzzleAnswer = "бегемот";
 
 function guessThePuzzle(puzzle, puzzleAnswer) {
   let answer = prompt(puzzle).toLowerCase();
-  if (answer == puzzleAnswer) {
+  if (answer === puzzleAnswer) {
     alert("Вы угадали");
     return;
   } else {
     alert("Подсказка 1 - это животное");
     let answerTwo = prompt(puzzle).toLowerCase();
 
-    if (answerTwo == puzzleAnswer) {
+    if (answerTwo === puzzleAnswer) {
       alert("Вы угадали");
       return;
     } else {
       alert("Подсказка 2 - это большое животное");
       let answerThree = prompt(puzzle).toLowerCase();
 
-      if (answerThree == puzzleAnswer) {
+      if (answerThree === puzzleAnswer) {
         alert("Вы угадали");
         return;
       } else {
