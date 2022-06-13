@@ -1,18 +1,24 @@
 let firstPlay = document.querySelector("#firstPlay");
 
 function nameMonth(number) {
-  let numberMonth = Number(prompt(number));
+  const numberMonth = Number(prompt(number));
 
   if (numberMonth > 2 && numberMonth < 6) {
     console.log("весна");
     return;
-  } else if (numberMonth > 5 && numberMonth < 9) {
+  }
+
+  if (numberMonth > 5 && numberMonth < 9) {
     console.log("лето");
     return;
-  } else if (numberMonth > 8 && numberMonth < 12) {
+  }
+
+  if (numberMonth > 8 && numberMonth < 12) {
     console.log("осень");
     return;
-  } else if (numberMonth == 12 || numberMonth == 1 || numberMonth == 2) {
+  }
+
+  if (numberMonth == 12 || numberMonth == 1 || numberMonth == 2) {
     console.log("зима");
     return;
   }
@@ -26,7 +32,7 @@ firstPlay.addEventListener("click", function () {
 
 let secondPlay = document.querySelector("#secondPlay");
 
-let randomWordArr = [
+const randomWordsArr = [
   "Яблоко",
   "Груша",
   "Дыня",
@@ -36,7 +42,7 @@ let randomWordArr = [
   "Мандарин",
 ];
 
-function getRandonWord(arr) {
+function getRandomWord(arr) {
   arr = arr.sort(() => Math.random() - 0.5);
 
   alert("Важен регистр слов:" + " " + arr);
@@ -57,39 +63,39 @@ function getRandonWord(arr) {
 }
 
 secondPlay.addEventListener("click", function () {
-  getRandonWord(randomWordArr);
+  getRandomWord(randomWordsArr);
 });
 
 let thirdPlay = document.querySelector("#thirdPlay");
 
-let puzzle = "У него огромный рот, он зовется …";
-let puzzleAnswer = "бегемот";
+const puzzle = "У него огромный рот, он зовется …";
+const puzzleAnswer = "бегемот";
 
 function guessThePuzzle(puzzle, puzzleAnswer) {
   let answer = prompt(puzzle).toLowerCase();
+
   if (answer === puzzleAnswer) {
     alert("Вы угадали");
     return;
-  } else {
-    alert("Подсказка 1 - это животное");
-    let answerTwo = prompt(puzzle).toLowerCase();
-
-    if (answerTwo === puzzleAnswer) {
-      alert("Вы угадали");
-      return;
-    } else {
-      alert("Подсказка 2 - это большое животное");
-      let answerThree = prompt(puzzle).toLowerCase();
-
-      if (answerThree === puzzleAnswer) {
-        alert("Вы угадали");
-        return;
-      } else {
-        alert("Вы не угадали");
-        return;
-      }
-    }
   }
+
+  alert("Подсказка 1 - это животное");
+  let answerTwo = prompt(puzzle).toLowerCase();
+
+  if (answerTwo === puzzleAnswer) {
+    alert("Вы угадали");
+    return;
+  }
+
+  alert("Подсказка 2 - это большое животное");
+  let answerThree = prompt(puzzle).toLowerCase();
+
+  if (answerThree === puzzleAnswer) {
+    alert("Вы угадали");
+    return;
+  }
+
+  alert("Вы не угадали");
 }
 
 thirdPlay.addEventListener("click", function () {

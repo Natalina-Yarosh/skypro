@@ -8,7 +8,7 @@
 let password = "пароль";
 let checkPassword = prompt("Введите пароль");
 
-if (password == checkPassword) {
+if (password === checkPassword) {
   alert("верно");
 } else {
   alert("неправильно");

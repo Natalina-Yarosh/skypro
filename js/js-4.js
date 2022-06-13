@@ -2,7 +2,7 @@
 let arrOne = [1, 5, 4, 10, 0, 3];
 for (let i = 0; i < arrOne.length; i++) {
   console.log(arrOne[i]);
-  if (arrOne[i] == 10) {
+  if (arrOne[i] === 10) {
     break;
   }
 }
@@ -22,7 +22,7 @@ let newArrFour = [];
 for (let i = 0; i < 10; i++) {
   arrFour.push(Math.round(Math.random() * 10));
 
-  if (arrFour[i] % 2 == 0) {
+  if (arrFour[i] % 2 === 0) {
     newArrFour.push(arrFour[i]);
   }
 }
@@ -65,7 +65,7 @@ let numberEight = Number(prompt(""));
 
 for (let i = 0; i < arrEight.length; i++) {
   if (arrEight[i] === numberEight) {
-    alert("это значение есть в массиве");
+    alert("Это значение есть в массиве");
   } else {
     alert("этого значения нет в массиве");
   }
