@@ -23,13 +23,10 @@
 .wrapper__title {
   position: absolute;
   left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  background: #000;
-  border: none;
+  top: 10%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
   color: #fff;
   font-size: 20px;
-  padding: 20px;
 }
 /*# sourceMappingURL=style.css.map */
