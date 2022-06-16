@@ -1,29 +1,20 @@
 const city = document.querySelector("#city");
 let result = [];
-let resultNumber = [];
+let resultNumbers = [];
 
 function showCoords(lat, lng) {
-  console.log(lat, lng);
-
   result = cities.map(function (array) {
     return Math.sqrt(
       Math.pow(array.lat - lat, 2) + Math.pow(array.lng - lng, 2)
     );
   });
 
-  console.log(result);
-
-  resultNumber = result.map(function (num) {
+  resultNumbers = result.map(function (num) {
     return num;
   });
 
-  resultNumber.sort((a, b) => a - b);
-
-  console.log(resultNumber);
-  console.log(result);
-
-  console.log(resultNumber[0], result.indexOf(resultNumber[0]));
-  let resultIndex = result.indexOf(resultNumber[0]);
+  resultNumbers.sort((a, b) => a - b);
+  let resultIndex = result.indexOf(resultNumbers[0]);
   city.textContent = cities[resultIndex].name;
 }
 
