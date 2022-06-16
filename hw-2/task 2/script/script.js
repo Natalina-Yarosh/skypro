@@ -1,34 +1,30 @@
-let city = document.querySelector("#city");
+const city = document.querySelector("#city");
+let result = [];
+let resultNumber = [];
 
 function showCoords(lat, lng) {
   console.log(lat, lng);
 
-  let latArray = [];
-  let lngArray = [];
-
-  latArray = cities.map(function (cities) {
-    if (lat - cities.lat > 0 || lat - cities.lat < lat) {
-      return lat - cities.lat;
-    }
+  result = cities.map(function (array) {
+    return Math.sqrt(
+      Math.pow(array.lat - lat, 2) + Math.pow(array.lng - lng, 2)
+    );
   });
-  console.log(latArray);
 
-  lngArray = cities.map(function (cities) {
-    if (lng - cities.lng > 0 || lng - cities.lng < lng) {
-      return lng - cities.lng;
-    }
+  console.log(result);
+
+  resultNumber = result.map(function (num) {
+    return num;
   });
-  console.log(lngArray);
 
-  let minNumber = (a, b) => {
-    return a < b ? a : b;
-  };
+  resultNumber.sort((a, b) => a - b);
 
-  let resLat = latArray.reduce(minNumber) + lat;
-  let index = cities.map((el) => el.lat).indexOf(resLat); //получить индекс элемента в массиве и вывести название
+  console.log(resultNumber);
+  console.log(result);
 
-  console.log(resLat, index);
-  console.log(lngArray.reduce(minNumber) + lng);
+  console.log(resultNumber[0], result.indexOf(resultNumber[0]));
+  let resultIndex = result.indexOf(resultNumber[0]);
+  city.textContent = cities[resultIndex].name;
 }
 
 navigator.geolocation.getCurrentPosition(function (data) {
