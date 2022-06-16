@@ -1,0 +1,36 @@
+@import "vars";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.wrap {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button_click {
+  font-size: 30px;
+  padding: 20px;
+  color: $colorSecondary;
+  background-color: $colorPrimary;
+  width: max-content;
+  border: none;
+  cursor: pointer;
+  transition: box-shadow 0.3s linear;
+
+  &:hover {
+    box-shadow: 0 0 10px $colorPrimary;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.6;
+  }
+}
