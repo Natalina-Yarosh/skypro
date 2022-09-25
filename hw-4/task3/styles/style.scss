@@ -1,0 +1,54 @@
+@import "vars";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.wrap {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  display: grid;
+  row-gap: 20px;
+  max-width: 500px;
+  &__input {
+    border: 1px solid $colorPrimary;
+    color: $colorPrimary;
+    padding: 15px;
+    transition: box-shadow 0.3s linear;
+    width: 100%;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 10px $colorPrimary;
+    }
+  }
+  &__textarea {
+    font-size: 30px;
+    padding: 20px;
+    color: $colorSecondary;
+    background-color: $colorPrimary;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    transition: box-shadow 0.3s linear;
+    outline: none;
+    resize: none;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      box-shadow: 0 0 10px $colorPrimary;
+    }
+  }
+}
