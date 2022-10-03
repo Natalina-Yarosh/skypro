@@ -1,20 +1,29 @@
-const buttonBack = document.querySelector(".btn_back");
-const inputs = document.querySelectorAll(".form__input");
+window.apiData = `[
+  {
+    "link": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Naja-siamensis-indochinese-spitting-cobra-southwest-thailand.jpg"
+  }]
+  `;
 
-function goBackHandler(event) {
-  let count = 0;
-  for (const input of inputs) {
-    if (input.value === "пожалуйста") {
-      count += 1;
-    }
-  }
-  if (count >= 3) {
-  } else {
-    alert("попробуй еще: нижний регистр");
-    event.preventDefault();
-  }
+const data = JSON.parse(apiData);
+
+function showPhoto(data) {
+  const dataImg = document.createElement("img");
+  dataImg.src = data[0].link;
+  dataImg.style.width = "100%";
+  dataImg.style.height = "100%";
+  dataImg.style.objectFit = "cover";
+  dataImg.classList.add("wrap__image");
+  dataImg.id = "dataImg";
+
+  return dataImg;
 }
 
-if (buttonBack) {
-  buttonBack.onclick = goBackHandler;
-}
+const container = document.querySelector(".wrap");
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.body.classList.add("loaded_hiding");
+  container.appendChild(showPhoto(data));
+
+  document.querySelector("#dataImg").onload = () =>
+    document.body.classList.remove("loaded_hiding");
+});

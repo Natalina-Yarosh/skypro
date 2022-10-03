@@ -1,3 +1,4 @@
 {
-  "cSpell.words": ["arraynew", "Геовиджет"]
+  "cSpell.words": ["arraynew", "Геовиджет"],
+  "prettier.singleQuote": true
 }
