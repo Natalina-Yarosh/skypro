@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.wrap {
+  padding: 50px;
+}
+
+.input {
+  border: 1px solid #391313;
+  padding: 20px;
+  border-radius: 0;
+  font-size: 20px;
+  color: #391313;
+  min-width: 500px;
+  -webkit-transition: -webkit-box-shadow 0.3s linear;
+  transition: -webkit-box-shadow 0.3s linear;
+  transition: box-shadow 0.3s linear;
+  transition: box-shadow 0.3s linear, -webkit-box-shadow 0.3s linear;
+}
+
+.input:hover {
+  -webkit-box-shadow: 0 0 5px 5px #391313;
+          box-shadow: 0 0 5px 5px #391313;
+}
+
+.input:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 2px 2px #391313;
+          box-shadow: 0 0 2px 2px #391313;
+}
+/*# sourceMappingURL=style.css.map */

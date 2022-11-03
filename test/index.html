@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1</title>
+
+    <style>
+      .click-tracker {
+        position: relative;
+        height: 120vh;
+      }
+      .spot {
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!--start 1
+    <div class="click-tracker">
+      <button class="event-button">click</button>
+    </div>
+    end 1-->
+
+    <!--start 2
+    <button class="count-button" data-clicks="0">
+      click
+      <span class="count-button__counter">0</span>
+    </button>
+    end 2-->
+    <div class="wrap">
+      <button class="event-button">click</button>
+    </div>
+
+    <script>
+      const eventButton = document.querySelector(".event-button");
+      const eventButtonWrap = document.querySelector(".wrap");
+
+      eventButton.onclick = function () {
+        const spot = document.createElement("div");
+        spot.classList.add("spot");
+        spot.textContent = "Hello";
+
+        eventButtonWrap.appendChild(spot);
+
+        eventButton.remove();
+      };
+
+      /*1
+      const clickTracker = document.querySelector(".click-tracker");
+
+      clickTracker.onclick = function (event) {
+        const x = event.offsetX;
+        const y = event.offsetY;
+
+        const spot = document.createElement("div");
+        spot.classList.add("spot");
+
+        clickTracker.appendChild(spot);
+
+        spot.style.top = y - 1 + "px";
+        spot.style.left = x - 1 + "px";
+      };
+      */
+
+      /*2
+      const countButtons = document.querySelectorAll(".count-button");
+
+      const handleCountButtonClick = (event) => {
+        const targetButton = event.target;
+
+        let clicks = Number(targetButton.dataset.clicks);
+
+        clicks += 1;
+
+        const counter = targetButton.querySelector(".count-button__counter");
+
+        counter.textContent = clicks;
+        targetButton.dataset.clicks = clicks;
+      };
+
+      countButtons.forEach((countButton) => {
+        countButton.onclick = handleCountButtonClick;
+      });
+      */
+    </script>
+  </body>
+</html>

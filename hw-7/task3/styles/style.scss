@@ -1,0 +1,29 @@
+$border: rgb(57, 19, 19);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.wrap {
+  text-align: center;
+  padding: 20px;
+}
+
+.event-button {
+  background-color: transparent;
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 0;
+  color: #000;
+  cursor: pointer;
+  transition: 0.3s linear;
+  opacity: 1;
+
+  &:hover {
+    background-color: #000;
+    color: #fff;
+  }
+}
